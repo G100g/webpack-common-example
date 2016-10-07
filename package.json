@@ -4,6 +4,7 @@
   "description": "Base example using webpack with common shared resources across pages",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "clean": "rimraf dest/scripts/*",
     "build": "npm run clean && webpack --config ./webpack.config.js",
     "serve": "ws -d dest/"
@@ -25,11 +26,14 @@
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
+    "babel-jest": "^16.0.0",
     "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.16.0",
     "babel-preset-es2015": "^6.16.0",
     "glob": "^7.1.0",
     "glob-array": "^0.1.2",
     "globby": "^6.0.0",
+    "jest": "^16.0.1",
     "local-web-server": "^1.2.6",
     "rimraf": "^2.5.4",
     "webpack-entry": "^1.1.5"
