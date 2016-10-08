@@ -1,8 +1,11 @@
-import redux from 'redux'
-import $ from 'jquery';
+import MenuComponent from '../modules/menu';
+import menudata from '../modules/menudata';
 
-import food from '../modules/food';
+$(function () {
 
-console.log(food);
-
-food.fruits.push('strawberry')
+  // Render footer menu entries
+  let footerMenu = new MenuComponent(
+                    $('#footerMenu'), // DOM element
+                    menudata.getEntries() // Main menu's entries
+                  );
+});

@@ -4,17 +4,14 @@ webpackJsonp([0],[
 
 	'use strict';
 
-	var _redux = __webpack_require__(1);
+	var _menudata = __webpack_require__(1);
 
-	var _redux2 = _interopRequireDefault(_redux);
-
-	var _food = __webpack_require__(16);
-
-	var _food2 = _interopRequireDefault(_food);
+	var _menudata2 = _interopRequireDefault(_menudata);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	console.log(fruits);
+	// Remove entry from menu only in this page
+	_menudata2.default.removeEntry('About');
 
 /***/ }
 ]);

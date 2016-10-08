@@ -5,15 +5,15 @@ var glob = require('globby');
 
 var base_src = path.join(__dirname, 'src');
 var globPath = ['**/*.js', '!modules/**/*.js'];
-console.log(globPath);
+
 var entry = glob
               .sync(globPath, {
                 cwd: base_src
               })
-.map((e) => {
-  console.log(e)
-  return e;
-})
+              .map((e) => {
+                console.log(e)
+                return e;
+              })
               // Create entry object using glob array
               .reduce((result, entry) => {
 
@@ -28,7 +28,9 @@ var entry = glob
                 return result;
 
               }, {})
-console.log(entry);
+
+// console.log(entry);
+
 module.exports = {
 
   entry: entry,

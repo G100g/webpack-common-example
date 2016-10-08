@@ -4,23 +4,23 @@ webpackJsonp([1],[
 
 	'use strict';
 
-	var _redux = __webpack_require__(1);
+	var _menu = __webpack_require__(2);
 
-	var _redux2 = _interopRequireDefault(_redux);
+	var _menu2 = _interopRequireDefault(_menu);
 
-	var _jquery = __webpack_require__(17);
+	var _menudata = __webpack_require__(1);
 
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	var _food = __webpack_require__(16);
-
-	var _food2 = _interopRequireDefault(_food);
+	var _menudata2 = _interopRequireDefault(_menudata);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	console.log(_food2.default);
+	$(function () {
 
-	_food2.default.fruits.push('strawberry');
+	  // Render footer menu entries
+	  var footerMenu = new _menu2.default($('#footerMenu'), // DOM element
+	  _menudata2.default.getEntries() // Main menu's entries
+	  );
+	});
 
 /***/ }
 ]);

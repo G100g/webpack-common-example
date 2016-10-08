@@ -1,4 +1,4 @@
-import redux from 'redux'
-import food from '../modules/food';
+import menudata from '../modules/menudata';
 
-console.log(fruits);
+// Remove entry from menu only in this page
+menudata.removeEntry('About');

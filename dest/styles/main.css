@@ -1,6 +1,31 @@
+body {
+  background-color: #FCfCfC;
+}
+
 .mainContent {
   width: 600px;
   padding: 3rem;
-  background-color: #FCfCfC;
+  background-color: #FFF;
   min-height: 100vh;
+}
+
+#footerMenu {
+  width: 100%;
+  font-size: 1.3rem;
+  background-color: #FCfCfC;
+  text-align: center;
+}
+
+  #footerMenu li {
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+  }
+
+
+.aboutContent__image {
+  width: 28%;
+  float: left;
+  margin: 0 2rem 0 0;
 }

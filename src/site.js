@@ -1,16 +1,15 @@
 // Vendor Modules
-import redux from 'redux';
 import $ from 'jquery';
 
-// My Modules
-import food from './modules/food';
+import MenuComponent from './modules/menu';
+import menudata from './modules/menudata';
 
-console.log($('body'));
+$(function () {
 
-console.log(food);
+  // Render menu entries
+  let menu = new MenuComponent(
+                    $('#mainMenu'), // DOM element
+                    menudata.getEntries() // Main menu's entries
+                  );
 
-food.fruits.push('cucumber')
-
-setTimeout(function () {
-  console.log(food);
-})
+});
