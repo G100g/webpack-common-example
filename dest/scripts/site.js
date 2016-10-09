@@ -131,6 +131,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	// Default entries
 	var entries = {
 	  'Home': 'index.html',
 	  'About': 'about.html'
@@ -187,7 +188,6 @@
 	    var $ul = (0, _jquery2.default)('<ul />');
 
 	    // Add each menu entry to UL node
-
 	    for (var entry in this.entries) {
 	      // Use new component for menu entry
 	      var $menuEntry = new _menuentry2.default(entry, this.entries[entry]);

@@ -1,3 +1,4 @@
+// Default entries
 const entries = {
   'Home': 'index.html',
   'About': 'about.html',

@@ -21,17 +21,14 @@ MenuComponent.prototype = {
     let $ul = $('<ul />');
 
     // Add each menu entry to UL node
-
     for (let entry in this.entries) {
       // Use new component for menu entry
       let $menuEntry = new MenuEntryComponent(entry, this.entries[entry]);
       $ul.append( $menuEntry.$el );
-
     }
 
     // insert UL node into the DOM
     this.$el.append($ul);
-
   }
 
 };

@@ -10,7 +10,7 @@ webpackJsonp([0],[
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// Remove entry from menu only in this page
+	// Remove entry from menu only for this page
 	_menudata2.default.removeEntry('About');
 
 /***/ }
