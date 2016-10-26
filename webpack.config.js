@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var glob = require('globby');
-// var entry = getEntries(path.join(__dirname, 'src'));
 
 var base_src = path.join(__dirname, 'src');
 var globPath = ['**/*.js', '!modules/**/*.js'];
@@ -10,26 +9,23 @@ var entry = glob
               .sync(globPath, {
                 cwd: base_src
               })
-              .map((e) => {
-                console.log(e)
-                return e;
-              })
               // Create entry object using glob array
-              .reduce((result, entry) => {
+              .reduce((result, filepath) => {
+
+                console.log(filepath);
 
                 // Create entry name using file path
-                var name = entry;
+                var name = filepath.substr(0, filepath.lastIndexOf('.'));
 
-                // Remove file extension
-                name = name.substr(0, name.lastIndexOf('.'));
-
-                result[name] = path.join(base_src, entry);
+                result[name] = path.join(base_src, filepath);
 
                 return result;
 
               }, {})
 
-// console.log(entry);
+console.log();
+console.log(JSON.stringify(entry, null, 4));
+console.log();
 
 module.exports = {
 
